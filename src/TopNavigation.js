@@ -18,9 +18,9 @@ import logo from "./assets/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-ci
 
 const drawerWidth = 240;
 const navItems = [
-  "Graphic",
-  "Websites",
-  "Digital Media",
+  "Images",
+  "Videos",
+  "Digital Art",
   "About",
   "News",
   "Contact",
@@ -60,11 +60,19 @@ function TopNavigation(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <>
-      <AppBar component="nav" sx={{ backgroundColor: "#314353" }}>
+    <Box component="header" sx={{ flexShrink: 0 }}>
+      <AppBar
+        component="nav"
+        sx={{ backgroundColor: "#314353" }}
+        position="static"
+      >
         <Toolbar
           sx={{
-            flexDirection: { xs: "row", sm: "column-reverse" },
+            flexDirection: {
+              xs: "row",
+              sm: "row-reverse",
+              md: "column-reverse",
+            },
             justifyContent: { xs: "space-between" },
           }}
         >
@@ -82,7 +90,7 @@ function TopNavigation(props) {
             src={logo}
             alt="KRL Media"
             sx={{
-              width: { xs: "3rem", sm: "7rem" },
+              width: { xs: "3rem", sm: "5rem", md: "7rem" },
               margin: "10px",
             }}
           ></Box>
@@ -99,7 +107,7 @@ function TopNavigation(props) {
                 key={item}
                 sx={{
                   color: "#fcf4e9",
-                  fontSize: "1.4rem",
+                  fontSize: { md: "1.4rem" },
                 }}
               >
                 {item}
@@ -132,7 +140,7 @@ function TopNavigation(props) {
           {drawer}
         </Drawer>
       </nav>
-    </>
+    </Box>
   );
 }
 

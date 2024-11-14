@@ -1,14 +1,15 @@
 import "./App.css";
 import TopNavigation from "./TopNavigation";
+import MediaSection from "./MediaSection";
+import FooterSection from "./FooterSection";
 
 function App() {
   return (
-    <section className="bg-[#fcf4e9] h-screen w-screen">
-      <header>
-        <TopNavigation />
-      </header>
-      <main></main>
-      <footer></footer>
+    <section className="bg-[#fcf4e9] min-h-screen w-screen flex flex-col">
+      <TopNavigation />
+
+      <MediaSection />
+      <FooterSection />
     </section>
   );
 }
