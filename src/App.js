@@ -1,14 +1,16 @@
 import "./App.css";
 import TopNavigation from "./TopNavigation";
-import MediaSection from "./MediaSection";
+import MainSection from "./MainSection";
 import FooterSection from "./FooterSection";
+import { useState } from "react";
 
 function App() {
-  return (
-    <section className="bg-[#fcf4e9] min-h-screen w-screen flex flex-col">
-      <TopNavigation />
+  const [selectedSection, setSelectedSection] = useState("images");
 
-      <MediaSection />
+  return (
+    <section className="bg-[#fcf4e9] min-h-screen flex flex-col">
+      <TopNavigation setSelectedSection={setSelectedSection} />
+      <MainSection selectedSection={selectedSection} />
       <FooterSection />
     </section>
   );

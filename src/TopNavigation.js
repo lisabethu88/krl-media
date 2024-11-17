@@ -1,3 +1,24 @@
+/**
+ * TopNavigation Component
+ *
+ * A responsive navigation bar for the KRL Media website. It features a logo, a horizontal menu on larger screens,
+ * and a collapsible drawer for mobile devices. The component allows users to navigate between different sections
+ * by selecting items from the menu or drawer.
+ *
+ * - **Features**:
+ *   - Logo displayed on the left with navigation options.
+ *   - Horizontal navigation bar for larger screens and vertical drawer for mobile screens.
+ *   - Animated hover effect for buttons.
+ *   - Drawer with list items for navigation on mobile.
+ *
+ * - **State Management**:
+ *   - `mobileOpen`: Controls the visibility of the mobile drawer.
+ *   - `setSelectedSection`: Callback to handle section selection, updating the current view based on the selected item.
+ *
+ * - **Responsive Design**:
+ *   - Menu adapts between a top bar and a collapsible side drawer depending on screen size.
+ */
+
 import React, { useState } from "react";
 import {
   AppBar,
@@ -14,7 +35,7 @@ import {
   Drawer,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import logo from "./assets/2bfb04ad814c4995f0c537c68db5cd0b-multicolor-swirls-circle-logo.webp";
+import logo from "./assets/logo.png";
 
 const drawerWidth = 240;
 const navItems = [
@@ -26,10 +47,12 @@ const navItems = [
   "Contact",
 ];
 
-function TopNavigation(props) {
-  const { window } = props;
-
+function TopNavigation({ setSelectedSection }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const handleSectionSelect = (section) => {
+    section = section.toLowerCase();
+    setSelectedSection(section);
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -47,7 +70,12 @@ function TopNavigation(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton
+              sx={{
+                textAlign: "center",
+              }}
+              onClick={() => handleSectionSelect(item)}
+            >
               <ListItemText primary={item} />
             </ListItemButton>
           </ListItem>
@@ -55,9 +83,6 @@ function TopNavigation(props) {
       </List>
     </Box>
   );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box component="header" sx={{ flexShrink: 0 }}>
@@ -91,9 +116,10 @@ function TopNavigation(props) {
             alt="KRL Media"
             sx={{
               width: { xs: "3rem", sm: "5rem", md: "7rem" },
-              margin: "10px",
+              margin: { xs: "1rem", md: "0rem" },
+              marginBottom: { md: "1rem" },
             }}
-          ></Box>
+          />
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },
@@ -108,7 +134,14 @@ function TopNavigation(props) {
                 sx={{
                   color: "#fcf4e9",
                   fontSize: { md: "1.4rem" },
+                  transition: "0.2s ease-in-out",
+                  textAlign: "center",
+                  ":hover": {
+                    fontSize: "large",
+                    transition: "0.2s ease-in-out",
+                  },
                 }}
+                onClick={() => handleSectionSelect(item)}
               >
                 {item}
               </Button>
@@ -118,12 +151,12 @@ function TopNavigation(props) {
       </AppBar>
       <nav>
         <Drawer
-          container={container}
+          container={undefined}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true,
           }}
           sx={{
             textTransform: "uppercase",
