@@ -76,7 +76,7 @@ To run the project locally, follow these steps:
 
 ## Development
 
-If you're planning to contribute or modify the project, you can work with the following technologies:
+Technology stack:
 
 - **React**: JavaScript library for building user interfaces.
 - **Material UI**: React UI framework for building responsive, modern web applications.
