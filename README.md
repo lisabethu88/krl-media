@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+# KRL Media
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**KRL Media** is a dynamic, responsive website showcasing various types of digital media such as images, videos, and digital art. The website features a clean, user-friendly interface with easy navigation and a modern design. It includes sections for News, Contact, and About.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Responsive Design**: Fully responsive layout that adapts to various screen sizes (mobile, tablet, desktop).
+- **Navigation**: A collapsible sidebar menu for mobile devices and a top navigation bar for desktop users.
+- **Dynamic Content**: Sections for Images, Videos, Digital Art, About, News, and Contact Information.
+- **Customizable Sections**: Easy management of different media sections.
+- **Modern Styling**: Designed with Material UI components for a consistent and user-friendly experience.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+- [KRL Media](#krl-media)
+  - [Features](#features)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Development](#development)
+    - [To start development:](#to-start-development)
+    - [Directory Structure](#directory-structure)
+  - [Deployment](#deployment)
+    - [To deploy on Vercel:](#to-deploy-on-vercel)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To run the project locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   git clone https://github.com/lisabethu88/krl-media.git
+   cd krl-media
+   ```
 
-### `npm run eject`
+2. **Install dependencies**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   Using npm:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Run the app**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   Using npm:
 
-## Learn More
+   ```bash
+   npm start
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   This will start the app on `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Visit the live version at: `https://krl-media.vercel.app`
+- The website includes several key sections:
+  - **Home**: Displays the navigation menu, logo, and featured media.
+  - **Images**: Displays image galleries.
+  - **Videos**: Showcases video content.
+  - **Digital Art**: Displays curated digital art pieces.
+  - **About**: Provides information about KRL Media.
+  - **News**: Latest updates and blog posts.
+  - **Contact**: Contact form for inquiries.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Development
 
-### Making a Progressive Web App
+If you're planning to contribute or modify the project, you can work with the following technologies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **React**: JavaScript library for building user interfaces.
+- **Material UI**: React UI framework for building responsive, modern web applications.
+- **Vercel**: Hosting and deployment platform used for continuous deployment.
 
-### Advanced Configuration
+### To start development:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Clone the repository.
+2. Install the dependencies using `npm install` or `yarn install`.
+3. Start the development server with `npm start` or `yarn start`.
 
-### Deployment
+### Directory Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `src/` - Contains the source code for the website.
+  - `assets/` - Contains images and other static assets.
+  - `App.js` - Main app component that brings everything together.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deployment
+
+This website is deployed on **Vercel** for easy deployment and continuous integration.
+
+### To deploy on Vercel:
+
+1. Push your code to a GitHub repository.
+2. Create a Vercel account at [vercel.com](https://vercel.com).
+3. Link your GitHub repository to Vercel.
+4. Vercel will automatically detect your project and deploy it.
+
+You can view the live version of the project at `https://krl-media.vercel.app`.
